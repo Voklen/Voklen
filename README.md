@@ -12,7 +12,7 @@ pub struct Me<'a> {
     name: &'a str,
     uptime: u128, // You never know...
     pronouns: (&'a str, &'a str),
-    favorite_languages: Vec<&'a str>, // Vector because languages could be added during runtime
+    favorite_languages: Vec<&'a str>, // Vector because languages could be added during human's runtime
     software_preferences: SoftwarePreferences<'a>
 }
 
