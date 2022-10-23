@@ -11,8 +11,8 @@ pub struct SoftwarePreferences<'a> {
 pub struct Me<'a> {
 	name: &'a str,
 	uptime: u128, // You never know...
-	pronouns: (&'a str, &'a str),
-	favorite_languages: Vec<&'a str>, // Vector because languages could be added during human's runtime
+	pronouns: Vec<&'a str>, // Vector because pronouns could be added or removed during human's runtime
+	favorite_languages: Vec<&'a str>,
 	software_preferences: SoftwarePreferences<'a>,
 }
 
@@ -20,7 +20,7 @@ fn main() -> Me<'static> {
 	Me {
 		name: "Alex Gorichev",
 		uptime: 16,
-		pronouns: ("he", "him"),
+		pronouns: vec!["he", "him", "they", "them"],
 		favorite_languages: vec!["Rust", "Python", "GDScript"],
 		software_preferences: SoftwarePreferences {
 			os: "Arch linux",
