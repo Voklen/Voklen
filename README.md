@@ -19,7 +19,7 @@ pub struct Me<'a> {
 fn main() -> Me<'static> {
 	Me {
 		name: "Alex Gorichev",
-		uptime: 16,
+		uptime: 17,
 		pronouns: vec!["he", "him", "they", "them"],
 		favorite_languages: vec!["Rust", "Python", "GDScript"],
 		software_preferences: SoftwarePreferences {
