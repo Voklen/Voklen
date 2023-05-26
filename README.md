@@ -5,7 +5,7 @@ pub struct SoftwarePreferences<'a> {
 	desktop_environment: &'a str,
 	browser: &'a str,
 	search_engine: &'a str, // Not local software, but software nevertheless
-	IDE: &'a str,
+	IDEs: Vec<&'a str>,
 }
 
 pub struct Me<'a> {
@@ -27,12 +27,10 @@ fn main() -> Me<'static> {
 			desktop_environment: "River",
 			browser: "Firefox",
 			search_engine: "Ecosia",
-			IDE: "VSCodium",
+			IDEs: vec!["Helix", "VSCodium"],
 		},
 	}
 }
-
-
 ```
 
 <!---
