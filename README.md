@@ -24,7 +24,7 @@ fn main() -> Me<'static> {
 		favorite_languages: vec!["Rust", "Python", "GDScript"],
 		software_preferences: SoftwarePreferences {
 			os: "Arch linux",
-			desktop_environment: "River",
+			desktop_environment: "Wayfire",
 			browser: "Firefox",
 			search_engine: "Ecosia",
 			IDEs: vec!["Helix", "VSCodium"],
