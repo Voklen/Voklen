@@ -1,35 +1,35 @@
 👋Hello, I'm Alex
 ```Rust
 pub struct SoftwarePreferences<'a> {
-	os: &'a str,
-	desktop_environment: &'a str,
-	browser: &'a str,
-	search_engine: &'a str, // Not local software, but software nevertheless
-	IDEs: Vec<&'a str>,
+    os: &'a str,
+    desktop_environment: &'a str,
+    browser: &'a str,
+    search_engine: &'a str, // Not local software, but software nevertheless
+    IDEs: Vec<&'a str>,
 }
 
 pub struct Me<'a> {
-	name: &'a str,
-	uptime: u128, // You never know...
-	pronouns: Vec<&'a str>, // Vector because pronouns could be added or removed during human's runtime
-	favorite_languages: Vec<&'a str>,
-	software_preferences: SoftwarePreferences<'a>,
+    name: &'a str,
+    uptime_years: u128,     // A u128 might be a biiit exccessive for age...
+    pronouns: Vec<&'a str>, // Vector because pronouns could be added or removed during human's runtime
+    favorite_languages: Vec<&'a str>,
+    software_preferences: SoftwarePreferences<'a>,
 }
 
-fn main() -> Me<'static> {
-	Me {
-		name: "Alex Gorichev",
-		uptime: 18,
-		pronouns: vec!["he", "him", "they", "them"],
-		favorite_languages: vec!["Rust", "Python", "GDScript"],
-		software_preferences: SoftwarePreferences {
-			os: "Arch linux",
-			desktop_environment: "Hyprland",
-			browser: "Firefox",
-			search_engine: "Ecosia",
-			IDEs: vec!["Helix", "VSCodium"],
-		},
-	}
+pub fn main<'a>() -> Me<'a> {
+    Me {
+        name: "Alex Gorichev",
+        uptime_years: 18,
+        pronouns: vec!["he", "him", "they", "them"],
+        favorite_languages: vec!["Rust", "Python", "GDScript"],
+        software_preferences: SoftwarePreferences {
+            os: "Arch linux",
+            desktop_environment: "Hyprland",
+            browser: "Firefox",
+            search_engine: "Ecosia",
+            IDEs: vec!["Helix", "VSCodium"],
+        },
+    }
 }
 ```
 
