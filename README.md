@@ -3,7 +3,7 @@
 pub fn main<'a>() -> Me<'a> {
 	Me {
 		name: "Alex Gorichev",
-		uptime_years: 19,
+		uptime_years: 20,
 		pronouns: vec!["he", "him"],
 		favorite_languages: vec!["Rust", "Python", "GDScript"],
 		software_preferences: SoftwarePreferences {
